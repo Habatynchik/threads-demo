@@ -13,19 +13,19 @@ public class Counter {
         }
     }
 
-    public synchronized int decrement() {
+    public int decrement() {
         synchronized (mutex) {
             return --value;
         }
     }
 
-    public synchronized int getValue() {
+    public int getValue() {
         synchronized (mutex) {
             return value;
         }
     }
 
-    public synchronized void setValue(int value) {
+    public void setValue(int value) {
         synchronized (mutex) {
             this.value = value;
         }
